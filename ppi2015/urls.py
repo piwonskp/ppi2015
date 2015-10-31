@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+from bookstore.views import BookListView
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', BookListView.as_view(), name='book-list')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
