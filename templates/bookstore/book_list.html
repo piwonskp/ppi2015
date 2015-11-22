@@ -6,7 +6,9 @@
     <h1>Books</h1>
     {% for book in object_list %}
         <div>
-            <img src="{{ book.image.url }}" style="width:50px; height:50px; float:left"/>
+            <a href="{{ book.image.url }}">
+                <img src="{{ book.image.url }}" style="width:50px; height:50px; float:left"/>
+            </a>
             <div>
                 <h3>{{ book.title }}</h3>
                 <p>{{ book.description }}</p>
